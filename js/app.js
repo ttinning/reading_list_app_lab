@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('#new-item-form');
-  form.addEventListener('submit', handleNewForm);  
+  form.addEventListener('submit', handleNewForm); 
+  
+  const deleteAll = document.querySelector('#delete-button');
+  deleteAll.addEventListener('click', handleDeleteAll);
 });
 
 const handleNewForm = function(event) {
@@ -18,4 +21,9 @@ const handleNewForm = function(event) {
   category.textContent = event.target.category.value;
   readingListItem.appendChild(category);
   this.reset();
+};
+
+const handleDeleteAll = function() {
+  const list = document.querySelector('#reading-list');
+  list.innerHTML = '';
 };
