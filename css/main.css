@@ -36,3 +36,13 @@ body {
   display:flex;
 }
 
+#delete-button {
+  right: 0px;
+  position: relative;
+  transition: ease-in 0.1s;
+}
+
+#delete-button:hover {
+  right: 200px;
+}
+
